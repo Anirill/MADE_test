@@ -1,8 +1,7 @@
 
 def max_subarray(numbers, k, max_len):
     """Find a contiguous subarray with the largest sum."""
-    best_sum = 0  # or: float('-inf')
-    best_start = best_end = 0  # or: None
+    best_sum = 0
     current_sum = 0
     for current_end, x in enumerate(numbers):
         if (current_sum <= 0) and (current_end != k) and ((current_end != k + max_len) or k < 0):
@@ -20,9 +19,9 @@ def max_subarray(numbers, k, max_len):
             best_start = current_start
             best_end = current_end + 1  # the +1 is to make 'best_end' exclusive
             if (best_end - best_start) >= (max_len):
-                return best_sum #, best_start, best_end
+                return best_sum
 
-    return best_sum #, best_start, best_end
+    return best_sum
 
 
 res = []

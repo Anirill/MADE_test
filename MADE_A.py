@@ -15,7 +15,6 @@ def generate(ki):
     ans = a + b
     return ans
 
-
 x = int(input())
 k = []
 res = []
